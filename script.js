@@ -9,6 +9,7 @@ function computerChoice(){
     return randomChoice = computerArray[Math.floor(Math.random() * computerArray.length)];
   }
 
+  //check for game winner
   function checkForWin(){
     if(computerScore == 5){
         alert("You lost the game!");
@@ -24,6 +25,7 @@ function computerChoice(){
     }
   }
 
+  //resets game after game over
   function resetGame(){
     computerScore = 0;
     playerScore = 0;
@@ -37,24 +39,14 @@ function computerChoice(){
     document.getElementById("playerchoice").innerHTML = user;
   }
 
-// game function that loops 5 times while tracking score. if selection is invalid, it loops until a valid selection is entered. //   
+// game function that transmits user button choice to playRound function
 function game() {
-  //  selectionLoop:
- // for(let i = 0; i < 5; i++) {
-    //    const playerSelection = window.prompt("Enter rock, paper or scissors.").toLowerCase();
-      //  if((playerSelection != "rock" && playerSelection != "paper" && playerSelection != "scissors") || (playerSelection == "")) {
-        //    i--;
-          //  alert("Invalid choice!")
-          //  continue selectionLoop;   
           let button = document.querySelectorAll('.choices');
           button.forEach((btn) => {
               btn.addEventListener("click", playRound); 
-          //const choices = document.querySelectorAll('.btn');
-         // choices.forEach((choices => choices.addEventListener('click', playRound)       playerSelection.addEventListener('click', playRound) 
-         // const playerSelection = choices.id
         })
     }
-// playRound function 
+// playRound function that performs one round of play
 function playRound(player) {
     playerSelection = player.srcElement.id;
     computerSelection = computerChoice();
@@ -98,11 +90,13 @@ function playRound(player) {
         }
     }
 
+//returns tied round 
 function tieRound(){
     var tie = 'You tied this round!';
     document.getElementById("results").innerHTML = tie;
 }
 
+//returns loses round
 function loseRound(){
     var lose = 'You lost this round!';
     document.getElementById("results").innerHTML = lose;
@@ -112,6 +106,7 @@ function loseRound(){
     checkForWin();
 }
 
+//returns wins round
 function winRound(){
     var win = 'You won this round!';
     document.getElementById("results").innerHTML = win;
@@ -121,5 +116,5 @@ function winRound(){
     checkForWin();
 }
 
-// console.log to print score to console
+// calls function to start the game
 game();
