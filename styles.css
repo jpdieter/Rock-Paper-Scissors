@@ -1,5 +1,13 @@
+html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
 body {
-    display: inline-block;
-    margin: 0px auto;
-    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
 }
