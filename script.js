@@ -1,5 +1,5 @@
    
-    // Variables //
+// Variables //
 let playerScore = 0;
 let computerScore = 0;
 
@@ -9,8 +9,8 @@ function computerChoice(){
     return randomChoice = computerArray[Math.floor(Math.random() * computerArray.length)];
   }
 
-  //check for game winner
-  function checkForWin(){
+//check for game winner
+function checkForWin(){
     if(computerScore == 5){
         alert("You lost the game!");
         var lose = "";
@@ -25,8 +25,8 @@ function computerChoice(){
     }
   }
 
-  //resets game after game over
-  function resetGame(){
+//resets game after game over
+function resetGame(){
     computerScore = 0;
     playerScore = 0;
     var compRunningScore = "";
@@ -41,9 +41,9 @@ function computerChoice(){
 
 // game function that transmits user button choice to playRound function
 function game() {
-          let button = document.querySelectorAll('.choices');
-          button.forEach((btn) => {
-              btn.addEventListener("click", playRound); 
+    let button = document.querySelectorAll('.choices');
+    button.forEach((btn) => {
+    btn.addEventListener("click", playRound); 
         })
     }
 // playRound function that performs one round of play
