@@ -5,6 +5,8 @@ html, body {
 html {
     display: table;
     margin: auto;
+    background-color: #0D0208;
+    color: white
 }
 
 body {
