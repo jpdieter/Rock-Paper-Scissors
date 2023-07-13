@@ -28,3 +28,8 @@ button:hover {
   background-color: #00FF41;
   color: white;
 }
+
+div{
+    margin: auto;
+    text-align: center;
+}
