@@ -11,3 +11,20 @@ body {
     display: table-cell;
     vertical-align: middle;
 }
+
+button {
+    background-color: #008F11; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    transition: 0.3s;
+  }
+
+
+button:hover {
+  background-color: #3e8e41;
+  color: white;
+}
