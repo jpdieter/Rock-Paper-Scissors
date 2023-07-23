@@ -1,3 +1,7 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
 html, body {
     height: 100%;
 }
@@ -34,4 +38,15 @@ button:hover {
 div{
     margin: auto;
     text-align: center;
+}
+
+h1{
+    color: white
+}
+
+.title{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 75px;
 }
